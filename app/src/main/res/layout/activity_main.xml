@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/background_gradient"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EYE PILOT"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="-50dp"
+        android:layout_marginBottom="60dp"
+        android:src="@drawable/logo" />
+    <ImageView
+        android:id="@+id/imgSilla"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/ic_silla"
+        android:layout_marginBottom="20dp"/>
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:indeterminateTint="#FFFFFF" />
+
+</LinearLayout>

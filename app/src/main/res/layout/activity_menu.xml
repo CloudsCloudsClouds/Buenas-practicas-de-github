@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/background_gradient"
+    android:padding="30dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MODO DE CONTROL"
+        android:textColor="#FFFFFF"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="40dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnBluetooth"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="CONEXIÓN BLUETOOTH"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:backgroundTint="#FF9800"
+        android:layout_marginBottom="25dp"
+        android:elevation="10dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnJoystick"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="CONTROL MANUAL\n(JOYSTICK)"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:background="@drawable/button_gradient_dark"
+        android:layout_marginBottom="25dp"
+        android:elevation="8dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnOcular"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="CONTROL POR\nRASTREO OCULAR"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:background="@drawable/button_gradient_dark"
+        android:elevation="8dp" />
+
+</LinearLayout>

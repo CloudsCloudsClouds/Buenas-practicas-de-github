@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <WebView
+        android:id="@+id/videoStream"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/viewFinder"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:alpha="0.0" />
+
+    <!---->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.3">
+        <View android:layout_width="1dp" android:layout_height="match_parent" android:background="#FFFFFF" app:layout_constraintHorizontal_bias="0.33" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" />
+        <View android:layout_width="1dp" android:layout_height="match_parent" android:background="#FFFFFF" app:layout_constraintHorizontal_bias="0.66" app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent" />
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#FFFFFF" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.33" />
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#FFFFFF" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.66" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="#80000000"
+        android:padding="8dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtCalibracion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="100dp"
+        android:text="MIRA AL PUNTO ROJO\nMANTÉN PARA ACTIVAR"
+        android:textAlignment="center"
+        android:textColor="#FFEB3B"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/layoutVelocidad"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F2000000"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        android:clickable="true"
+        android:focusable="true">
+        <Button android:id="@+id/btnVel1" android:layout_width="0dp" android:layout_weight="1" android:layout_height="100dp" android:text="VELOCIDAD 1\n(Alfombra)" android:backgroundTint="#4CAF50" android:layout_margin="10dp"/>
+        <Button android:id="@+id/btnVel2" android:layout_width="0dp" android:layout_weight="1" android:layout_height="100dp" android:text="VELOCIDAD 2\n(Piso)" android:backgroundTint="#2196F3" android:layout_margin="10dp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnContinuar"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:text="REANUDAR"
+        android:visibility="gone"
+        android:backgroundTint="#FF5252"/>
+
+    <ImageView
+        android:id="@+id/puntoRojoFijo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:src="@android:drawable/presence_online"
+        android:visibility="gone"
+        app:tint="#80FF0000" />
+
+    <ImageView
+        android:id="@+id/puntoGuia"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@android:drawable/presence_online"
+        app:tint="#00FF00" />
+</FrameLayout>
