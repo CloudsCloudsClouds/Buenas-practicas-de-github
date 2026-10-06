@@ -1,0 +1,40 @@
+site_name: EyePilot
+site_description: Control inalámbrico de una silla de ruedas
+docs_dir: docs
+
+theme:
+  name: material
+  language: es
+  palette:
+    - scheme: default
+      primary: deep purple
+      accent: purple
+      toggle:
+        icon: material/weather-night
+        name: Cambiar a modo oscuro
+    - scheme: slate
+      primary: deep purple
+      accent: purple
+      toggle:
+        icon: material/weather-sunny
+        name: Cambiar a modo claro
+  features:
+    - navigation.top
+    - navigation.instant
+    - content.code.copy
+    - toc.follow
+
+nav:
+  - Inicio: index.md
+  - Protocolo: protocolo.md
+  - Seguridad: seguridad.md
+  - Decisiones: decisiones.md
+  - Puesta en marcha: puesta-en-marcha.md
+
+markdown_extensions:
+  - admonition
+  - fenced_code
+  - tables
+  - attr_list
+  - toc:
+      permalink: true
